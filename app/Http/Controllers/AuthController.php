@@ -39,7 +39,8 @@ class AuthController extends Controller
             return response(['message' => 'Invalid credentials'], Response::HTTP_UNAUTHORIZED);
         }
         
-        $accessToken = auth()->user()->createToken('authToken')->plainTextToken;
+        // login token 
+        $accessToken = auth()->user()->createToken('authToken')->plainTextToken; 
 
         $cookie = cookie('jwt', $accessToken, 60*24); // 1 day
         

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PreferenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,7 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
     
     // LOGOUT USER ROUTE
     Route::post('/logout', [AuthController::class, 'logout']);
+
+    // CREATE PREFERENCE ROUTE
+    Route::post('/preference', [PreferenceController::class, 'createPreference']);
 });
