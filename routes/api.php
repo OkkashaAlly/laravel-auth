@@ -33,4 +33,7 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
 
     // CREATE PREFERENCE ROUTE
     Route::post('/preference', [PreferenceController::class, 'createPreference']);
+
+    // GET PREFERENCE ROUTE
+    Route::get('/preference', [PreferenceController::class, 'getPreference']);
 });

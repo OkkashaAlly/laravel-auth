@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('preferences', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('sources', 55);
-            $table->string('categories', 55);
-            $table->string('countries', 55);
-            $table->string('languages', 55);
-            $table->string('sortBy', 55);
+            $table->string('sources');
+            $table->string('categories');
+            $table->string('countries');
+            $table->string('languages');
+            $table->string('sortBy');
             $table->foreignId('user_id')->constrained();
         });
     }

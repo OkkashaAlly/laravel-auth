@@ -22,4 +22,9 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function userPreference()
+    {
+        return $this->hasOne(Preference::class, 'user_id');
+    }
+
 }
